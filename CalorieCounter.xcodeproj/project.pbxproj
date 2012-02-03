@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C095C91614DC4061005CBF76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C095C91514DC4061005CBF76 /* UIKit.framework */; };
+		C095C91814DC4061005CBF76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C095C91714DC4061005CBF76 /* Foundation.framework */; };
+		C095C91A14DC4061005CBF76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C095C91914DC4061005CBF76 /* CoreGraphics.framework */; };
+		C095C92014DC4061005CBF76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C095C91E14DC4061005CBF76 /* InfoPlist.strings */; };
+		C095C92214DC4061005CBF76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92114DC4061005CBF76 /* main.m */; };
+		C095C92614DC4061005CBF76 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92514DC4061005CBF76 /* CCAppDelegate.m */; };
+		C095C92914DC4061005CBF76 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92814DC4061005CBF76 /* CCViewController.m */; };
+		C095C92C14DC4061005CBF76 /* CCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C095C92A14DC4061005CBF76 /* CCViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C095C91114DC4061005CBF76 /* CalorieCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C095C91514DC4061005CBF76 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C095C91714DC4061005CBF76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C095C91914DC4061005CBF76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C095C91D14DC4061005CBF76 /* CalorieCounter-Info.plist */ = {isa = PBXFileReference; path = "CalorieCounter-Info.plist"; sourceTree = "<group>"; };
+		C095C91F14DC4061005CBF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C095C92114DC4061005CBF76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C095C92314DC4061005CBF76 /* CalorieCounter-Prefix.pch */ = {isa = PBXFileReference; path = "CalorieCounter-Prefix.pch"; sourceTree = "<group>"; };
+		C095C92414DC4061005CBF76 /* CCAppDelegate.h */ = {isa = PBXFileReference; path = CCAppDelegate.h; sourceTree = "<group>"; };
+		C095C92514DC4061005CBF76 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
+		C095C92714DC4061005CBF76 /* CCViewController.h */ = {isa = PBXFileReference; path = CCViewController.h; sourceTree = "<group>"; };
+		C095C92814DC4061005CBF76 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		C095C92B14DC4061005CBF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CCViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C095C90E14DC4061005CBF76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C095C91614DC4061005CBF76 /* UIKit.framework in Frameworks */,
+				C095C91814DC4061005CBF76 /* Foundation.framework in Frameworks */,
+				C095C91A14DC4061005CBF76 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C095C90614DC4061005CBF76 = {
+			isa = PBXGroup;
+			children = (
+				C095C91B14DC4061005CBF76 /* CalorieCounter */,
+				C095C91414DC4061005CBF76 /* Frameworks */,
+				C095C91214DC4061005CBF76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C095C91214DC4061005CBF76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C095C91114DC4061005CBF76 /* CalorieCounter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C095C91414DC4061005CBF76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C095C91514DC4061005CBF76 /* UIKit.framework */,
+				C095C91714DC4061005CBF76 /* Foundation.framework */,
+				C095C91914DC4061005CBF76 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C095C91B14DC4061005CBF76 /* CalorieCounter */ = {
+			isa = PBXGroup;
+			children = (
+				C095C92414DC4061005CBF76 /* CCAppDelegate.h */,
+				C095C92514DC4061005CBF76 /* CCAppDelegate.m */,
+				C095C92714DC4061005CBF76 /* CCViewController.h */,
+				C095C92814DC4061005CBF76 /* CCViewController.m */,
+				C095C92A14DC4061005CBF76 /* CCViewController.xib */,
+				C095C91C14DC4061005CBF76 /* Supporting Files */,
+			);
+			path = CalorieCounter;
+			sourceTree = "<group>";
+		};
+		C095C91C14DC4061005CBF76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C095C91D14DC4061005CBF76 /* CalorieCounter-Info.plist */,
+				C095C91E14DC4061005CBF76 /* InfoPlist.strings */,
+				C095C92114DC4061005CBF76 /* main.m */,
+				C095C92314DC4061005CBF76 /* CalorieCounter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C095C91014DC4061005CBF76 /* CalorieCounter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C095C92F14DC4061005CBF76 /* Build configuration list for PBXNativeTarget "CalorieCounter" */;
+			buildPhases = (
+				C095C90D14DC4061005CBF76 /* Sources */,
+				C095C90E14DC4061005CBF76 /* Frameworks */,
+				C095C90F14DC4061005CBF76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalorieCounter;
+			productName = CalorieCounter;
+			productReference = C095C91114DC4061005CBF76 /* CalorieCounter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C095C90814DC4061005CBF76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "University of Waterloo";
+			};
+			buildConfigurationList = C095C90B14DC4061005CBF76 /* Build configuration list for PBXProject "CalorieCounter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C095C90614DC4061005CBF76;
+			productRefGroup = C095C91214DC4061005CBF76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C095C91014DC4061005CBF76 /* CalorieCounter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C095C90F14DC4061005CBF76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C095C92014DC4061005CBF76 /* InfoPlist.strings in Resources */,
+				C095C92C14DC4061005CBF76 /* CCViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C095C90D14DC4061005CBF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C095C92214DC4061005CBF76 /* main.m in Sources */,
+				C095C92614DC4061005CBF76 /* CCAppDelegate.m in Sources */,
+				C095C92914DC4061005CBF76 /* CCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C095C91E14DC4061005CBF76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C095C91F14DC4061005CBF76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C095C92A14DC4061005CBF76 /* CCViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C095C92B14DC4061005CBF76 /* en */,
+			);
+			name = CCViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C095C92D14DC4061005CBF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C095C92E14DC4061005CBF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C095C93014DC4061005CBF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CalorieCounter/CalorieCounter-Prefix.pch";
+				INFOPLIST_FILE = "CalorieCounter/CalorieCounter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C095C93114DC4061005CBF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CalorieCounter/CalorieCounter-Prefix.pch";
+				INFOPLIST_FILE = "CalorieCounter/CalorieCounter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C095C90B14DC4061005CBF76 /* Build configuration list for PBXProject "CalorieCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C095C92D14DC4061005CBF76 /* Debug */,
+				C095C92E14DC4061005CBF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C095C92F14DC4061005CBF76 /* Build configuration list for PBXNativeTarget "CalorieCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C095C93014DC4061005CBF76 /* Debug */,
+				C095C93114DC4061005CBF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C095C90814DC4061005CBF76 /* Project object */;
+}
