@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C042A45115C88F3E00CB49F5 /* CCCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C042A44F15C88F3E00CB49F5 /* CCCoreData.xcdatamodeld */; };
+		C067BFC914E2DDFE00C1BBAA /* 10-medical.png in Resources */ = {isa = PBXBuildFile; fileRef = C067BFC714E2DDFE00C1BBAA /* 10-medical.png */; };
+		C067BFCA14E2DDFE00C1BBAA /* 10-medical@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C067BFC814E2DDFE00C1BBAA /* 10-medical@2x.png */; };
 		C095C91614DC4061005CBF76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C095C91514DC4061005CBF76 /* UIKit.framework */; };
 		C095C91814DC4061005CBF76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C095C91714DC4061005CBF76 /* Foundation.framework */; };
 		C095C91A14DC4061005CBF76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C095C91914DC4061005CBF76 /* CoreGraphics.framework */; };
@@ -15,22 +18,55 @@
 		C095C92614DC4061005CBF76 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92514DC4061005CBF76 /* CCAppDelegate.m */; };
 		C095C92914DC4061005CBF76 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92814DC4061005CBF76 /* CCViewController.m */; };
 		C095C92C14DC4061005CBF76 /* CCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C095C92A14DC4061005CBF76 /* CCViewController.xib */; };
+		C095C93314DC4242005CBF76 /* CalorieDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C095C93214DC4242005CBF76 /* CalorieDetailViewCell.xib */; };
+		C095C93614DC47FB005CBF76 /* CalorieDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C93514DC47FB005CBF76 /* CalorieDetailViewCell.m */; };
+		C09B834715052B060072DCBA /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C09B834615052B060072DCBA /* XMLParser.m */; };
+		C09B834B15052B860072DCBA /* XMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C09B834A15052B850072DCBA /* XMLElement.m */; };
+		C09B834F15052ED30072DCBA /* BorderedSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C09B834D15052ED20072DCBA /* BorderedSpinnerView.m */; };
+		C09B835015052ED30072DCBA /* BorderedSpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C09B834E15052ED20072DCBA /* BorderedSpinnerView.xib */; };
+		C09B835315054AE30072DCBA /* NSString+NSString_URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C09B835215054AE30072DCBA /* NSString+NSString_URLEncoding.m */; };
+		C0ADFA0715C893900022B5AF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0ADFA0615C893900022B5AF /* CoreData.framework */; };
+		C0ADFA0B15C8A10C0022B5AF /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA0A15C8A10C0022B5AF /* Day.m */; };
+		C0ADFA0E15C8A10C0022B5AF /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA0D15C8A10C0022B5AF /* Food.m */; };
+		C0ADFA1115C8A17B0022B5AF /* CCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA1015C8A17B0022B5AF /* CCDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C042A45015C88F3E00CB49F5 /* CCCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CCCoreData.xcdatamodel; sourceTree = "<group>"; };
+		C067BFC714E2DDFE00C1BBAA /* 10-medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-medical.png"; sourceTree = "<group>"; };
+		C067BFC814E2DDFE00C1BBAA /* 10-medical@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-medical@2x.png"; sourceTree = "<group>"; };
 		C095C91114DC4061005CBF76 /* CalorieCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C095C91514DC4061005CBF76 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C095C91714DC4061005CBF76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C095C91914DC4061005CBF76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C095C91D14DC4061005CBF76 /* CalorieCounter-Info.plist */ = {isa = PBXFileReference; path = "CalorieCounter-Info.plist"; sourceTree = "<group>"; };
+		C095C91D14DC4061005CBF76 /* CalorieCounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalorieCounter-Info.plist"; sourceTree = "<group>"; };
 		C095C91F14DC4061005CBF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C095C92114DC4061005CBF76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C095C92314DC4061005CBF76 /* CalorieCounter-Prefix.pch */ = {isa = PBXFileReference; path = "CalorieCounter-Prefix.pch"; sourceTree = "<group>"; };
-		C095C92414DC4061005CBF76 /* CCAppDelegate.h */ = {isa = PBXFileReference; path = CCAppDelegate.h; sourceTree = "<group>"; };
+		C095C92314DC4061005CBF76 /* CalorieCounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalorieCounter-Prefix.pch"; sourceTree = "<group>"; };
+		C095C92414DC4061005CBF76 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		C095C92514DC4061005CBF76 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
-		C095C92714DC4061005CBF76 /* CCViewController.h */ = {isa = PBXFileReference; path = CCViewController.h; sourceTree = "<group>"; };
+		C095C92714DC4061005CBF76 /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
 		C095C92814DC4061005CBF76 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
 		C095C92B14DC4061005CBF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CCViewController.xib; sourceTree = "<group>"; };
+		C095C93214DC4242005CBF76 /* CalorieDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalorieDetailViewCell.xib; sourceTree = "<group>"; };
+		C095C93414DC47FB005CBF76 /* CalorieDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalorieDetailViewCell.h; sourceTree = "<group>"; };
+		C095C93514DC47FB005CBF76 /* CalorieDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalorieDetailViewCell.m; sourceTree = "<group>"; };
+		C09B834515052B060072DCBA /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = classes/XMLParser.h; sourceTree = "<group>"; };
+		C09B834615052B060072DCBA /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLParser.m; path = classes/XMLParser.m; sourceTree = "<group>"; };
+		C09B834915052B850072DCBA /* XMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLElement.h; path = classes/XMLElement.h; sourceTree = "<group>"; };
+		C09B834A15052B850072DCBA /* XMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLElement.m; path = classes/XMLElement.m; sourceTree = "<group>"; };
+		C09B834C15052ED20072DCBA /* BorderedSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BorderedSpinnerView.h; path = classes/BorderedSpinnerView.h; sourceTree = "<group>"; };
+		C09B834D15052ED20072DCBA /* BorderedSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BorderedSpinnerView.m; path = classes/BorderedSpinnerView.m; sourceTree = "<group>"; };
+		C09B834E15052ED20072DCBA /* BorderedSpinnerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BorderedSpinnerView.xib; path = classes/BorderedSpinnerView.xib; sourceTree = "<group>"; };
+		C09B835115054AE30072DCBA /* NSString+NSString_URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+NSString_URLEncoding.h"; path = "classes/NSString+NSString_URLEncoding.h"; sourceTree = "<group>"; };
+		C09B835215054AE30072DCBA /* NSString+NSString_URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+NSString_URLEncoding.m"; path = "classes/NSString+NSString_URLEncoding.m"; sourceTree = "<group>"; };
+		C0ADFA0615C893900022B5AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C0ADFA0915C8A10C0022B5AF /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
+		C0ADFA0A15C8A10C0022B5AF /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
+		C0ADFA0C15C8A10C0022B5AF /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		C0ADFA0D15C8A10C0022B5AF /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		C0ADFA0F15C8A17B0022B5AF /* CCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDataManager.h; path = classes/CCDataManager.h; sourceTree = "<group>"; };
+		C0ADFA1015C8A17B0022B5AF /* CCDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDataManager.m; path = classes/CCDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0ADFA0715C893900022B5AF /* CoreData.framework in Frameworks */,
 				C095C91614DC4061005CBF76 /* UIKit.framework in Frameworks */,
 				C095C91814DC4061005CBF76 /* Foundation.framework in Frameworks */,
 				C095C91A14DC4061005CBF76 /* CoreGraphics.framework in Frameworks */,
@@ -47,6 +84,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C042A44D15C88F2200CB49F5 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				C042A44F15C88F3E00CB49F5 /* CCCoreData.xcdatamodeld */,
+				C0ADFA0C15C8A10C0022B5AF /* Food.h */,
+				C0ADFA0D15C8A10C0022B5AF /* Food.m */,
+				C0ADFA0915C8A10C0022B5AF /* Day.h */,
+				C0ADFA0A15C8A10C0022B5AF /* Day.m */,
+				C0ADFA0F15C8A17B0022B5AF /* CCDataManager.h */,
+				C0ADFA1015C8A17B0022B5AF /* CCDataManager.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		C067BFC614E2DDD500C1BBAA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C067BFC714E2DDFE00C1BBAA /* 10-medical.png */,
+				C067BFC814E2DDFE00C1BBAA /* 10-medical@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		C095C90614DC4061005CBF76 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +127,7 @@
 		C095C91414DC4061005CBF76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0ADFA0615C893900022B5AF /* CoreData.framework */,
 				C095C91514DC4061005CBF76 /* UIKit.framework */,
 				C095C91714DC4061005CBF76 /* Foundation.framework */,
 				C095C91914DC4061005CBF76 /* CoreGraphics.framework */,
@@ -77,11 +138,25 @@
 		C095C91B14DC4061005CBF76 /* CalorieCounter */ = {
 			isa = PBXGroup;
 			children = (
+				C042A44D15C88F2200CB49F5 /* Core Data */,
+				C067BFC614E2DDD500C1BBAA /* Images */,
 				C095C92414DC4061005CBF76 /* CCAppDelegate.h */,
 				C095C92514DC4061005CBF76 /* CCAppDelegate.m */,
 				C095C92714DC4061005CBF76 /* CCViewController.h */,
 				C095C92814DC4061005CBF76 /* CCViewController.m */,
 				C095C92A14DC4061005CBF76 /* CCViewController.xib */,
+				C095C93214DC4242005CBF76 /* CalorieDetailViewCell.xib */,
+				C095C93414DC47FB005CBF76 /* CalorieDetailViewCell.h */,
+				C095C93514DC47FB005CBF76 /* CalorieDetailViewCell.m */,
+				C09B834915052B850072DCBA /* XMLElement.h */,
+				C09B834A15052B850072DCBA /* XMLElement.m */,
+				C09B834515052B060072DCBA /* XMLParser.h */,
+				C09B834615052B060072DCBA /* XMLParser.m */,
+				C09B834C15052ED20072DCBA /* BorderedSpinnerView.h */,
+				C09B834D15052ED20072DCBA /* BorderedSpinnerView.m */,
+				C09B834E15052ED20072DCBA /* BorderedSpinnerView.xib */,
+				C09B835115054AE30072DCBA /* NSString+NSString_URLEncoding.h */,
+				C09B835215054AE30072DCBA /* NSString+NSString_URLEncoding.m */,
 				C095C91C14DC4061005CBF76 /* Supporting Files */,
 			);
 			path = CalorieCounter;
@@ -151,6 +226,10 @@
 			files = (
 				C095C92014DC4061005CBF76 /* InfoPlist.strings in Resources */,
 				C095C92C14DC4061005CBF76 /* CCViewController.xib in Resources */,
+				C095C93314DC4242005CBF76 /* CalorieDetailViewCell.xib in Resources */,
+				C067BFC914E2DDFE00C1BBAA /* 10-medical.png in Resources */,
+				C067BFCA14E2DDFE00C1BBAA /* 10-medical@2x.png in Resources */,
+				C09B835015052ED30072DCBA /* BorderedSpinnerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +243,15 @@
 				C095C92214DC4061005CBF76 /* main.m in Sources */,
 				C095C92614DC4061005CBF76 /* CCAppDelegate.m in Sources */,
 				C095C92914DC4061005CBF76 /* CCViewController.m in Sources */,
+				C095C93614DC47FB005CBF76 /* CalorieDetailViewCell.m in Sources */,
+				C09B834715052B060072DCBA /* XMLParser.m in Sources */,
+				C09B834B15052B860072DCBA /* XMLElement.m in Sources */,
+				C09B834F15052ED30072DCBA /* BorderedSpinnerView.m in Sources */,
+				C09B835315054AE30072DCBA /* NSString+NSString_URLEncoding.m in Sources */,
+				C042A45115C88F3E00CB49F5 /* CCCoreData.xcdatamodeld in Sources */,
+				C0ADFA0B15C8A10C0022B5AF /* Day.m in Sources */,
+				C0ADFA0E15C8A10C0022B5AF /* Food.m in Sources */,
+				C0ADFA1115C8A17B0022B5AF /* CCDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +363,22 @@
 				C095C93114DC4061005CBF76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C042A44F15C88F3E00CB49F5 /* CCCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C042A45015C88F3E00CB49F5 /* CCCoreData.xcdatamodel */,
+			);
+			currentVersion = C042A45015C88F3E00CB49F5 /* CCCoreData.xcdatamodel */;
+			path = CCCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C095C90814DC4061005CBF76 /* Project object */;
 }
