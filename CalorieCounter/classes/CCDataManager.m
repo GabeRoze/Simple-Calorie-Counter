@@ -22,12 +22,69 @@ static CCDataManager *sharedInstance = nil;
     return self;
 }
 
+-(FoodEntry *)createNewFoodEntryWithDay:(Day *)day
+{
+    FoodEntry *newFoodEntry = [NSEntityDescription insertNewObjectForEntityForName:@"FoodEntry" inManagedObjectContext:appDelegate.managedObjectContext];
+    newFoodEntry.date = day;
+    newFoodEntry.count = [NSNumber numberWithInteger:day.foodEntries.count];
+    [self saveContext];
+
+    return newFoodEntry;
+}
+
+-(void)updateFoodEntryWithFoodEntry:(FoodEntry *)foodEntry
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date ==  %@ AND count == %@", foodEntry.date, foodEntry.count];
+    NSArray *foodEntries = [self fetchEntityForEntityName:@"FoodEntry" withPredicate:predicate];
+
+    if ([foodEntries count] > 0)
+    {
+        FoodEntry *foodEntryFromMemory = [foodEntries objectAtIndex:0];
+        foodEntryFromMemory = foodEntry;
+        [self saveContext];
+    }
+}
+
+-(Food *)createNewFoodWithString:(NSString *)foodName
+{
+    Food *newFood =  [NSEntityDescription insertNewObjectForEntityForName:@"Food" inManagedObjectContext:appDelegate.managedObjectContext];
+    newFood.foodName = foodName;
+    [self saveContext];
+
+    return newFood;
+}
+
+-(Food *)getFoodWithString:(NSString *)foodName
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"foodName ==  %@", foodName];
+    NSArray *foods = [self fetchEntityForEntityName:@"Food" withPredicate:predicate];
+
+    if ([foods count] > 0)
+    {
+        return  (Food *)[foods objectAtIndex:0];
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+-(void)updateFoodWithFood:(Food *)food
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"foodName ==  %@", food.foodName];
+    NSArray *foods = [self fetchEntityForEntityName:@"Food" withPredicate:predicate];
+
+    if ([foods count] > 0)
+    {
+        Food *foodFromMemory = [foods objectAtIndex:0];
+        foodFromMemory = food;
+        [self saveContext];
+    }
+}
+
 -(Day *)getDayWithDate:(NSDate *)date
 {
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:date];
-//    NSInteger day = [components day];
-//    NSInteger month = [components month];
-//    NSInteger year = [components year];
 
     NSNumber *getDay = [NSNumber numberWithInteger:[components day]];
     NSNumber *getMonth = [NSNumber numberWithInteger:[components month]];
@@ -65,23 +122,13 @@ static CCDataManager *sharedInstance = nil;
 
 -(void)updateDayWithDay:(Day *)day
 {
-//    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:date];
-//    NSInteger day = [components day];
-//    NSInteger month = [components month];
-//    NSInteger year = [components year];
-
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"day == %@ AND month == %@ AND year == %@",day.day, day.month, day.year];
-
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"date ==%@", day.date];
     NSArray *days = [self fetchEntityForEntityName:@"Day" withPredicate:predicate];
 
     if ([days count] > 0)
     {
         Day *dayFromMemory = [days objectAtIndex:0];
         dayFromMemory = day;
-
-        NSError *savingError = nil;
-
         [self saveContext];
     }
 }
@@ -141,8 +188,6 @@ static CCDataManager *sharedInstance = nil;
     return sharedInstance;
 }
 
-
-
 #pragma mark Test Methods
 -(void)displayAllDays
 {
@@ -154,9 +199,29 @@ static CCDataManager *sharedInstance = nil;
         NSLog(@"DAY: %@", day.day);
         NSLog(@"MONTH: %@", day.month);
         NSLog(@"YEAR: %@\n", day.year);
-
     }
-
 }
 
+-(void)displayEntriesForDay:(Day *)day
+{
+    for (int i = 0; i < [day.foodEntries count]; i++)
+    {
+        FoodEntry *foodEntry = [day.foodEntries objectAtIndex:i];
+        NSLog(@"FOOD NAME: %@", foodEntry.food.foodName);
+        NSLog(@"FOOD CALS: %@", foodEntry.food.foodCalories);
+        NSLog(@"DATE DAY: %@", foodEntry.date.day);
+        NSLog(@"COUNT: %@", foodEntry.count);
+    }
+}
+
+-(void)displayAllFoods
+{
+    NSArray *foods = [self fetchEntityForEntityName:@"Food" withPredicate:nil];
+    for (int i = 0; i < [foods count]; i++)
+    {
+        Food *food = [foods objectAtIndex:i];
+        NSLog(@"FOODNAME: %@", food.foodName);
+        NSLog(@"FOODCALS: %@", food.foodCalories);
+    }
+}
 @end

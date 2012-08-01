@@ -29,6 +29,9 @@
 		C0ADFA1115C8A17B0022B5AF /* CCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA1015C8A17B0022B5AF /* CCDataManager.m */; };
 		C0ADFA1815C8BF030022B5AF /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA1715C8BF030022B5AF /* Food.m */; };
 		C0ADFA1B15C8BF040022B5AF /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA1A15C8BF040022B5AF /* Day.m */; };
+		C0ADFA2C15C8C9150022B5AF /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = C0ADFA2A15C8C9150022B5AF /* 83-calendar.png */; };
+		C0ADFA2D15C8C9150022B5AF /* 83-calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0ADFA2B15C8C9150022B5AF /* 83-calendar@2x.png */; };
+		C0ADFA3015C8DF970022B5AF /* FoodEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA2F15C8DF970022B5AF /* FoodEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,10 @@
 		C0ADFA1715C8BF030022B5AF /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = classes/Food.m; sourceTree = "<group>"; };
 		C0ADFA1915C8BF040022B5AF /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Day.h; path = classes/Day.h; sourceTree = "<group>"; };
 		C0ADFA1A15C8BF040022B5AF /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Day.m; path = classes/Day.m; sourceTree = "<group>"; };
+		C0ADFA2A15C8C9150022B5AF /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
+		C0ADFA2B15C8C9150022B5AF /* 83-calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar@2x.png"; sourceTree = "<group>"; };
+		C0ADFA2E15C8DF970022B5AF /* FoodEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodEntry.h; sourceTree = "<group>"; };
+		C0ADFA2F15C8DF970022B5AF /* FoodEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				C042A44F15C88F3E00CB49F5 /* CCCoreData.xcdatamodeld */,
+				C0ADFA2E15C8DF970022B5AF /* FoodEntry.h */,
+				C0ADFA2F15C8DF970022B5AF /* FoodEntry.m */,
 				C0ADFA1915C8BF040022B5AF /* Day.h */,
 				C0ADFA1A15C8BF040022B5AF /* Day.m */,
 				C0ADFA1615C8BF030022B5AF /* Food.h */,
@@ -138,6 +147,7 @@
 		C095C91B14DC4061005CBF76 /* CalorieCounter */ = {
 			isa = PBXGroup;
 			children = (
+				C0ADFA2915C8C9150022B5AF /* Resources */,
 				C0ADFA2415C8C5010022B5AF /* Classes */,
 				C095C92414DC4061005CBF76 /* CCAppDelegate.h */,
 				C095C92514DC4061005CBF76 /* CCAppDelegate.m */,
@@ -205,6 +215,15 @@
 			name = Old;
 			sourceTree = "<group>";
 		};
+		C0ADFA2915C8C9150022B5AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C0ADFA2A15C8C9150022B5AF /* 83-calendar.png */,
+				C0ADFA2B15C8C9150022B5AF /* 83-calendar@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,6 +281,8 @@
 				C067BFC914E2DDFE00C1BBAA /* 10-medical.png in Resources */,
 				C067BFCA14E2DDFE00C1BBAA /* 10-medical@2x.png in Resources */,
 				C09B835015052ED30072DCBA /* BorderedSpinnerView.xib in Resources */,
+				C0ADFA2C15C8C9150022B5AF /* 83-calendar.png in Resources */,
+				C0ADFA2D15C8C9150022B5AF /* 83-calendar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +305,7 @@
 				C0ADFA1115C8A17B0022B5AF /* CCDataManager.m in Sources */,
 				C0ADFA1815C8BF030022B5AF /* Food.m in Sources */,
 				C0ADFA1B15C8BF040022B5AF /* Day.m in Sources */,
+				C0ADFA3015C8DF970022B5AF /* FoodEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

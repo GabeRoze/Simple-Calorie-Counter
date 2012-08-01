@@ -13,6 +13,9 @@
 
 
 @implementation CCMainViewController
+@synthesize navBar;
+@synthesize navItem;
+@synthesize dateLabel;
 
 @synthesize table, calorieTotal, totalCals, numRows, rowNumberCount, movedPosition, borderedSpinnerView, currentDay;
 
@@ -49,13 +52,13 @@ static CCMainViewController * CCViewControllerInstance;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    totalCals = 0;
-    numRows = 12;
-    rowNumberCount = 0;
+    // Do any additional setup after loading the view, typically from a nib.
+
     CCViewControllerInstance = self;
     borderedSpinnerView = [[BorderedSpinnerView alloc] init];
 
+
+    //set up days and core data
     CCDataManager *ccDataManager = [[CCDataManager alloc] init];
     currentDay = [ccDataManager getDayWithDate:[NSDate date]];
     if (currentDay == nil)
@@ -64,6 +67,37 @@ static CCMainViewController * CCViewControllerInstance;
     }
 
     [ccDataManager displayAllDays];
+
+    self.dateLabel.text = [NSString stringWithFormat:@"%@/%@/%@", currentDay.month, currentDay.day, currentDay.year];
+
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                 target:self
+                                                                                 action:@selector(addRow)];
+
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"83-calendar.png"]
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(presentCalendarView)];
+    self.navItem.rightBarButtonItem = rightButton;
+    self.navItem.leftBarButtonItem = leftButton;
+
+
+    totalCals = 0;
+    numRows = currentDay.foodEntries.count;
+    rowNumberCount = 0;
+}
+
+-(void) addRow
+{
+    numRows++;
+    [[CCDataManager sharedInstance] createNewFoodEntryWithDay:currentDay];
+    [self.table reloadData];
+    [[CCDataManager sharedInstance] displayEntriesForDay:currentDay];
+}
+
+-(void) presentCalendarView
+{
+    NSLog(@"presentCalendar");
 }
 
 -(void) displayLoadingScreen
@@ -82,6 +116,9 @@ static CCMainViewController * CCViewControllerInstance;
 {
     [self setCalorieTotal:nil];
     [self setTable:nil];
+    [self setNavBar:nil];
+    [self setNavItem:nil];
+    [self setDateLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -99,12 +136,12 @@ static CCMainViewController * CCViewControllerInstance;
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-	[super viewWillDisappear:animated];
+    [super viewWillDisappear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-	[super viewDidDisappear:animated];
+    [super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -144,7 +181,7 @@ static CCMainViewController * CCViewControllerInstance;
     }
 
     totalCals = total;
-    calorieTotal.text = [NSString stringWithFormat:@"%i",totalCals];
+    calorieTotal.text = [NSString stringWithFormat:@"\@%i",totalCals];
 }
 
 
@@ -159,7 +196,6 @@ static CCMainViewController * CCViewControllerInstance;
     [UIView setAnimationDuration:movementduration];
     self.view.frame = CGRectOffset(self.view.frame, 0, distance);
     [UIView commitAnimations];
-
 }
 
 
@@ -171,7 +207,7 @@ static CCMainViewController * CCViewControllerInstance;
     const float movementduration = 0.3f;
     //int temp = self.view.frame.;
 
-    NSLog(@"distance %i",distance);
+//    NSLog(@"distance %i",distance);
 
     [UIView beginAnimations:@"anim" context:nil];
     [UIView setAnimationBeginsFromCurrentState:YES];
@@ -207,8 +243,13 @@ static CCMainViewController * CCViewControllerInstance;
 
     if (!cell1.rowNumber)
     {
-        NSLog(@"rownumbercount %i", rowNumberCount);
+//        NSLog(@"rownumbercount %i", rowNumberCount);
+        FoodEntry *foodEntry = [currentDay.foodEntries objectAtIndex:indexPath.row];
+        cell1.foodEntry = foodEntry;
+        cell1.foodNameLabel.text = foodEntry.food.foodName;
+        cell1.consumedCalories.text = [NSString stringWithFormat:@"%i", [foodEntry.food.foodCalories intValue]];
         cell1.rowNumber = rowNumberCount;
+        cell1.currentDay = currentDay;
         rowNumberCount++;
     }
 

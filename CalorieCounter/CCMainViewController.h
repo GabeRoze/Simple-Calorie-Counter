@@ -22,6 +22,9 @@
 @property (assign, nonatomic) int movedPosition;
 @property (strong, nonatomic) BorderedSpinnerView* borderedSpinnerView;
 @property (strong, nonatomic) Day *currentDay;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navItem;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 +(CCMainViewController *)sharedCCViewController;
 

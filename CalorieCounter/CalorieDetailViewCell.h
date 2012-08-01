@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FoodEntry.h"
+#import "Day.h"
 
 @class BorderedSpinnerView;
 @class XMLParser;
@@ -18,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *consumedCalories;
 @property (weak, nonatomic) IBOutlet UITextField *foodNameLabel;
 @property (assign, nonatomic) int rowNumber;
+@property (strong, nonatomic) FoodEntry *foodEntry;
+@property (strong, nonatomic) Day *currentDay;
+
 @property (strong, nonatomic) BorderedSpinnerView* borderedSpinnerView;
 @property (strong, nonatomic) NSString* messageText;
 @property (strong, nonatomic) XMLParser* parser;
@@ -31,9 +35,9 @@
 - (IBAction)calorieEditingDidBegin:(id)sender;
 
 -(void) valueChanged;
--(void) connectToServer:(NSString*)data;
--(void) parseXMLFile:(NSData*)data;
--(void) serverResponseAcquired;
--(NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding str:(NSString*)str;
+//-(void) connectToServer:(NSString*)data;
+//-(void) parseXMLFile:(NSData*)data;
+//-(void) serverResponseAcquired;
+//-(NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding str:(NSString*)str;
 
 @end

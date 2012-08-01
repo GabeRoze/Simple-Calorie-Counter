@@ -10,14 +10,11 @@
 #import "CCMainViewController.h"
 #import "BorderedSpinnerView.h"
 #import "XMLParser.h"
+#import "CCDataManager.h"
 
 @implementation CalorieDetailViewCell
-@synthesize foodNameLabel;
-@synthesize consumedCalories;
-@synthesize rowNumber;
-@synthesize borderedSpinnerView;
-@synthesize messageText;
-@synthesize parser;
+
+@synthesize foodNameLabel, foodEntry, consumedCalories, rowNumber, borderedSpinnerView, messageText, parser, currentDay;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -36,7 +33,24 @@
 
 - (IBAction)foodLabelDonePressed:(id)sender
 {
+
+    CCDataManager *dataManager = [CCDataManager sharedInstance];
+    //check if food name exists
+    //if no food exists, add it
+    if (![dataManager getFoodWithString:foodNameLabel.text])
+    {
+        self.foodEntry.food = [dataManager createNewFoodWithString:foodNameLabel.text];
+    }
+    else if ([dataManager getFoodWithString:foodNameLabel.text])
+    {
+        //food exists - set cals
+        self.foodEntry.food = [dataManager getFoodWithString:foodNameLabel.text];
+        self.consumedCalories.text = [NSString stringWithFormat:@"%i",[self.foodEntry.food.foodCalories intValue]];
+    }
+
+
     [self.consumedCalories becomeFirstResponder];
+    [dataManager displayAllFoods];
 }
 
 - (IBAction)editingDidBegin:(id)sender
@@ -61,10 +75,15 @@
 -(void) valueChanged
 {
     //NSLog(@"animateview done %f", (self.frame.size.height*rowNumber));
+    foodEntry.food.foodCalories = [NSNumber numberWithInt:[self.consumedCalories.text intValue]];
+    [[CCDataManager sharedInstance] updateFoodEntryWithFoodEntry:foodEntry];
 
     [[CCMainViewController sharedCCViewController] updateTotalCals];
     [[CCMainViewController sharedCCViewController] removeKeyboard];
     [[CCMainViewController sharedCCViewController] resetView];//animateView: self.frame.size.height * (rowNumber+1)];
+
+
+    [[CCDataManager sharedInstance] displayAllFoods];
 }
 
 @end
