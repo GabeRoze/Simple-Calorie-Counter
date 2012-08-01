@@ -26,9 +26,9 @@
 		C09B835015052ED30072DCBA /* BorderedSpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C09B834E15052ED20072DCBA /* BorderedSpinnerView.xib */; };
 		C09B835315054AE30072DCBA /* NSString+NSString_URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C09B835215054AE30072DCBA /* NSString+NSString_URLEncoding.m */; };
 		C0ADFA0715C893900022B5AF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0ADFA0615C893900022B5AF /* CoreData.framework */; };
-		C0ADFA0B15C8A10C0022B5AF /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA0A15C8A10C0022B5AF /* Day.m */; };
-		C0ADFA0E15C8A10C0022B5AF /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA0D15C8A10C0022B5AF /* Food.m */; };
 		C0ADFA1115C8A17B0022B5AF /* CCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA1015C8A17B0022B5AF /* CCDataManager.m */; };
+		C0ADFA1815C8BF030022B5AF /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA1715C8BF030022B5AF /* Food.m */; };
+		C0ADFA1B15C8BF040022B5AF /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = C0ADFA1A15C8BF040022B5AF /* Day.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,12 +61,12 @@
 		C09B835115054AE30072DCBA /* NSString+NSString_URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+NSString_URLEncoding.h"; path = "classes/NSString+NSString_URLEncoding.h"; sourceTree = "<group>"; };
 		C09B835215054AE30072DCBA /* NSString+NSString_URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+NSString_URLEncoding.m"; path = "classes/NSString+NSString_URLEncoding.m"; sourceTree = "<group>"; };
 		C0ADFA0615C893900022B5AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		C0ADFA0915C8A10C0022B5AF /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
-		C0ADFA0A15C8A10C0022B5AF /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
-		C0ADFA0C15C8A10C0022B5AF /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
-		C0ADFA0D15C8A10C0022B5AF /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 		C0ADFA0F15C8A17B0022B5AF /* CCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDataManager.h; path = classes/CCDataManager.h; sourceTree = "<group>"; };
 		C0ADFA1015C8A17B0022B5AF /* CCDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDataManager.m; path = classes/CCDataManager.m; sourceTree = "<group>"; };
+		C0ADFA1615C8BF030022B5AF /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = classes/Food.h; sourceTree = "<group>"; };
+		C0ADFA1715C8BF030022B5AF /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = classes/Food.m; sourceTree = "<group>"; };
+		C0ADFA1915C8BF040022B5AF /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Day.h; path = classes/Day.h; sourceTree = "<group>"; };
+		C0ADFA1A15C8BF040022B5AF /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Day.m; path = classes/Day.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				C042A44F15C88F3E00CB49F5 /* CCCoreData.xcdatamodeld */,
-				C0ADFA0C15C8A10C0022B5AF /* Food.h */,
-				C0ADFA0D15C8A10C0022B5AF /* Food.m */,
-				C0ADFA0915C8A10C0022B5AF /* Day.h */,
-				C0ADFA0A15C8A10C0022B5AF /* Day.m */,
+				C0ADFA1915C8BF040022B5AF /* Day.h */,
+				C0ADFA1A15C8BF040022B5AF /* Day.m */,
+				C0ADFA1615C8BF030022B5AF /* Food.h */,
+				C0ADFA1715C8BF030022B5AF /* Food.m */,
 				C0ADFA0F15C8A17B0022B5AF /* CCDataManager.h */,
 				C0ADFA1015C8A17B0022B5AF /* CCDataManager.m */,
 			);
@@ -249,9 +249,9 @@
 				C09B834F15052ED30072DCBA /* BorderedSpinnerView.m in Sources */,
 				C09B835315054AE30072DCBA /* NSString+NSString_URLEncoding.m in Sources */,
 				C042A45115C88F3E00CB49F5 /* CCCoreData.xcdatamodeld in Sources */,
-				C0ADFA0B15C8A10C0022B5AF /* Day.m in Sources */,
-				C0ADFA0E15C8A10C0022B5AF /* Food.m in Sources */,
 				C0ADFA1115C8A17B0022B5AF /* CCDataManager.m in Sources */,
+				C0ADFA1815C8BF030022B5AF /* Food.m in Sources */,
+				C0ADFA1B15C8BF040022B5AF /* Day.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Day.h"
+#import "Food.h"
 
 @class BorderedSpinnerView;
 
@@ -19,6 +21,7 @@
 @property (assign, nonatomic) int rowNumberCount;
 @property (assign, nonatomic) int movedPosition;
 @property (strong, nonatomic) BorderedSpinnerView* borderedSpinnerView;
+@property (strong, nonatomic) Day *currentDay;
 
 +(CCViewController*)sharedCCViewController;
 

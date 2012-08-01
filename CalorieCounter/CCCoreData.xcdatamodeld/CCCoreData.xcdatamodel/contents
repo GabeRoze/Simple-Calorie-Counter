@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="11E53" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Day" representedClassName="Day" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="dayGoal" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="netGoal" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="totalCalories" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="year" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="foodEntries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Food" syncable="YES"/>
     </entity>
     <entity name="Food" representedClassName="Food" syncable="YES">
@@ -14,6 +16,6 @@
     </entity>
     <elements>
         <element name="Food" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Day" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Day" positionX="-63" positionY="141" width="128" height="150"/>
     </elements>
 </model>

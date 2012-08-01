@@ -7,6 +7,7 @@
 //
 
 #import "Day.h"
+#import "Food.h"
 
 
 @implementation Day
@@ -14,7 +15,9 @@
 @dynamic dayGoal;
 @dynamic netGoal;
 @dynamic totalCalories;
-@dynamic date;
+@dynamic year;
+@dynamic month;
+@dynamic day;
 @dynamic foodEntries;
 
 @end
