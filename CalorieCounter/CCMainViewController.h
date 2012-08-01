@@ -12,7 +12,7 @@
 
 @class BorderedSpinnerView;
 
-@interface CCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CCMainViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (assign, nonatomic) int totalCals;
 @property (weak, nonatomic) IBOutlet UITextField *calorieTotal;
@@ -23,7 +23,7 @@
 @property (strong, nonatomic) BorderedSpinnerView* borderedSpinnerView;
 @property (strong, nonatomic) Day *currentDay;
 
-+(CCViewController*)sharedCCViewController;
++(CCMainViewController *)sharedCCViewController;
 
 -(void)updateTotalCals;
 -(void) removeKeyboard;

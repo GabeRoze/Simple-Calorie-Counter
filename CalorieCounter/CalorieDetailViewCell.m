@@ -7,7 +7,7 @@
 //
 
 #import "CalorieDetailViewCell.h"
-#import "CCViewController.h"
+#import "CCMainViewController.h"
 #import "BorderedSpinnerView.h"
 #import "XMLParser.h"
 
@@ -41,14 +41,14 @@
 
 - (IBAction)editingDidBegin:(id)sender
 {
-    [[CCViewController sharedCCViewController] resetView];
-    [[CCViewController sharedCCViewController] animateView: 32 * (rowNumber*-1)];
+    [[CCMainViewController sharedCCViewController] resetView];
+    [[CCMainViewController sharedCCViewController] animateView: 32 * (rowNumber*-1)];
 }
 
 - (IBAction)calorieEditingDidBegin:(id)sender
 {
-    [[CCViewController sharedCCViewController] resetView];
-    [[CCViewController sharedCCViewController] animateView: 32 * (rowNumber*-1)];
+    [[CCMainViewController sharedCCViewController] resetView];
+    [[CCMainViewController sharedCCViewController] animateView: 32 * (rowNumber*-1)];
 //    [[CCViewController sharedCCViewController] displayLoadingScreen];
 //    [self connectToServer:foodNameLabel.text];
 }
@@ -62,9 +62,9 @@
 {
     //NSLog(@"animateview done %f", (self.frame.size.height*rowNumber));
 
-    [[CCViewController sharedCCViewController] updateTotalCals];
-    [[CCViewController sharedCCViewController] removeKeyboard];
-    [[CCViewController sharedCCViewController] resetView];//animateView: self.frame.size.height * (rowNumber+1)];
+    [[CCMainViewController sharedCCViewController] updateTotalCals];
+    [[CCMainViewController sharedCCViewController] removeKeyboard];
+    [[CCMainViewController sharedCCViewController] resetView];//animateView: self.frame.size.height * (rowNumber+1)];
 }
 
 @end

@@ -16,7 +16,7 @@
 		C095C92014DC4061005CBF76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C095C91E14DC4061005CBF76 /* InfoPlist.strings */; };
 		C095C92214DC4061005CBF76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92114DC4061005CBF76 /* main.m */; };
 		C095C92614DC4061005CBF76 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92514DC4061005CBF76 /* CCAppDelegate.m */; };
-		C095C92914DC4061005CBF76 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92814DC4061005CBF76 /* CCViewController.m */; };
+		C095C92914DC4061005CBF76 /* CCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C92814DC4061005CBF76 /* CCMainViewController.m */; };
 		C095C92C14DC4061005CBF76 /* CCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C095C92A14DC4061005CBF76 /* CCViewController.xib */; };
 		C095C93314DC4242005CBF76 /* CalorieDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C095C93214DC4242005CBF76 /* CalorieDetailViewCell.xib */; };
 		C095C93614DC47FB005CBF76 /* CalorieDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C095C93514DC47FB005CBF76 /* CalorieDetailViewCell.m */; };
@@ -45,8 +45,8 @@
 		C095C92314DC4061005CBF76 /* CalorieCounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalorieCounter-Prefix.pch"; sourceTree = "<group>"; };
 		C095C92414DC4061005CBF76 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		C095C92514DC4061005CBF76 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
-		C095C92714DC4061005CBF76 /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
-		C095C92814DC4061005CBF76 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		C095C92714DC4061005CBF76 /* CCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMainViewController.h; sourceTree = "<group>"; };
+		C095C92814DC4061005CBF76 /* CCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMainViewController.m; sourceTree = "<group>"; };
 		C095C92B14DC4061005CBF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CCViewController.xib; sourceTree = "<group>"; };
 		C095C93214DC4242005CBF76 /* CalorieDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalorieDetailViewCell.xib; sourceTree = "<group>"; };
 		C095C93414DC47FB005CBF76 /* CalorieDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalorieDetailViewCell.h; sourceTree = "<group>"; };
@@ -138,25 +138,11 @@
 		C095C91B14DC4061005CBF76 /* CalorieCounter */ = {
 			isa = PBXGroup;
 			children = (
-				C042A44D15C88F2200CB49F5 /* Core Data */,
-				C067BFC614E2DDD500C1BBAA /* Images */,
+				C0ADFA2415C8C5010022B5AF /* Classes */,
 				C095C92414DC4061005CBF76 /* CCAppDelegate.h */,
 				C095C92514DC4061005CBF76 /* CCAppDelegate.m */,
-				C095C92714DC4061005CBF76 /* CCViewController.h */,
-				C095C92814DC4061005CBF76 /* CCViewController.m */,
-				C095C92A14DC4061005CBF76 /* CCViewController.xib */,
-				C095C93214DC4242005CBF76 /* CalorieDetailViewCell.xib */,
-				C095C93414DC47FB005CBF76 /* CalorieDetailViewCell.h */,
-				C095C93514DC47FB005CBF76 /* CalorieDetailViewCell.m */,
-				C09B834915052B850072DCBA /* XMLElement.h */,
-				C09B834A15052B850072DCBA /* XMLElement.m */,
-				C09B834515052B060072DCBA /* XMLParser.h */,
-				C09B834615052B060072DCBA /* XMLParser.m */,
-				C09B834C15052ED20072DCBA /* BorderedSpinnerView.h */,
-				C09B834D15052ED20072DCBA /* BorderedSpinnerView.m */,
-				C09B834E15052ED20072DCBA /* BorderedSpinnerView.xib */,
-				C09B835115054AE30072DCBA /* NSString+NSString_URLEncoding.h */,
-				C09B835215054AE30072DCBA /* NSString+NSString_URLEncoding.m */,
+				C042A44D15C88F2200CB49F5 /* Core Data */,
+				C067BFC614E2DDD500C1BBAA /* Images */,
 				C095C91C14DC4061005CBF76 /* Supporting Files */,
 			);
 			path = CalorieCounter;
@@ -171,6 +157,52 @@
 				C095C92314DC4061005CBF76 /* CalorieCounter-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0ADFA2415C8C5010022B5AF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C0ADFA2815C8C52E0022B5AF /* Old */,
+				C0ADFA2715C8C51C0022B5AF /* Table */,
+				C0ADFA2615C8C5070022B5AF /* View Controllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C0ADFA2615C8C5070022B5AF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C095C92714DC4061005CBF76 /* CCMainViewController.h */,
+				C095C92814DC4061005CBF76 /* CCMainViewController.m */,
+				C095C92A14DC4061005CBF76 /* CCViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C0ADFA2715C8C51C0022B5AF /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				C095C93214DC4242005CBF76 /* CalorieDetailViewCell.xib */,
+				C095C93414DC47FB005CBF76 /* CalorieDetailViewCell.h */,
+				C095C93514DC47FB005CBF76 /* CalorieDetailViewCell.m */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		C0ADFA2815C8C52E0022B5AF /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				C09B835115054AE30072DCBA /* NSString+NSString_URLEncoding.h */,
+				C09B835215054AE30072DCBA /* NSString+NSString_URLEncoding.m */,
+				C09B834915052B850072DCBA /* XMLElement.h */,
+				C09B834A15052B850072DCBA /* XMLElement.m */,
+				C09B834515052B060072DCBA /* XMLParser.h */,
+				C09B834615052B060072DCBA /* XMLParser.m */,
+				C09B834C15052ED20072DCBA /* BorderedSpinnerView.h */,
+				C09B834D15052ED20072DCBA /* BorderedSpinnerView.m */,
+				C09B834E15052ED20072DCBA /* BorderedSpinnerView.xib */,
+			);
+			name = Old;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +274,7 @@
 			files = (
 				C095C92214DC4061005CBF76 /* main.m in Sources */,
 				C095C92614DC4061005CBF76 /* CCAppDelegate.m in Sources */,
-				C095C92914DC4061005CBF76 /* CCViewController.m in Sources */,
+				C095C92914DC4061005CBF76 /* CCMainViewController.m in Sources */,
 				C095C93614DC47FB005CBF76 /* CalorieDetailViewCell.m in Sources */,
 				C09B834715052B060072DCBA /* XMLParser.m in Sources */,
 				C09B834B15052B860072DCBA /* XMLElement.m in Sources */,

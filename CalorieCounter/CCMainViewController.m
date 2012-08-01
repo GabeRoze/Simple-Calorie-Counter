@@ -6,17 +6,17 @@
 //  Copyright (c) 2012 University of Waterloo. All rights reserved.
 //
 
-#import "CCViewController.h"
+#import "CCMainViewController.h"
 #import "CalorieDetailViewCell.h"
 #import "BorderedSpinnerView.h"
 #import "CCDataManager.h"
 
 
-@implementation CCViewController
+@implementation CCMainViewController
 
 @synthesize table, calorieTotal, totalCals, numRows, rowNumberCount, movedPosition, borderedSpinnerView, currentDay;
 
-static CCViewController* CCViewControllerInstance;
+static CCMainViewController * CCViewControllerInstance;
 
 
 /*
@@ -33,7 +33,7 @@ static CCViewController* CCViewControllerInstance;
 }
  */
 
-+(CCViewController*) sharedCCViewController
++(CCMainViewController *) sharedCCViewController
 {
     NSAssert(CCViewControllerInstance != nil, @"CCViewController not available!");
     return CCViewControllerInstance;

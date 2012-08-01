@@ -8,7 +8,7 @@
 
 #import "CCAppDelegate.h"
 
-#import "CCViewController.h"
+#import "CCMainViewController.h"
 
 @implementation CCAppDelegate
 
@@ -22,7 +22,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[CCViewController alloc] initWithNibName:@"CCViewController" bundle:nil];
+    self.viewController = [[CCMainViewController alloc] initWithNibName:@"CCViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
